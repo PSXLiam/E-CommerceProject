@@ -4,9 +4,9 @@ import './AppFooter.css'
 function AppFooter() {
     return(
         <div className='footerBody'>
-            <p>test1</p>
-            <p>test2</p>
-            <p>test3</p>
+            <button className='footerButton'>FAQ</button>
+            <button className='footerButton'>Help</button>
+            <button className='footerButton'>About Us</button>
         </div>
     )
 }
