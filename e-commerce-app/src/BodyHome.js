@@ -10,7 +10,12 @@ function BodyHome() {
                 </div>
             </div>
             <div className='bodyBottom'>
-
+                <p className='PRec'>Product Recommendations</p>
+                <div className='prodRecommendations'>
+                    <div className='TESTPRODUCT'>TEST1</div>
+                    <div className='TESTPRODUCT'>TEST2</div>
+                    <div className='TESTPRODUCT'>TEST3</div>
+                </div>
             </div>
         </div>
     )
