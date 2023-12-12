@@ -1,0 +1,32 @@
+.AppBody{
+    height: 60vh;
+}
+
+.bodyTop{
+    background-color: aqua;
+    width: 100vw;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bigHelpButton{
+    background-color: darkolivegreen;
+    width: 90vw;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bigHelpButton:hover{
+    cursor: pointer;
+    scale: 105%;
+}
+
+.bodyBottom{
+    background-color: coral;
+    width: 100vw;
+    height: 50%;
+}

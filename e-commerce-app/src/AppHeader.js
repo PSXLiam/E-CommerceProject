@@ -5,11 +5,13 @@ function AppHeader() {
 
     const [pages, setPages] = useState([
         {title: "Home"},
-        {title: "Test2"},
-        {title: "Test3"},
-        {title: "Test4"},
-        {title: "Test5"}
+        {title: ""},
+        {title: ""},
+        {title: ""},
+        {title: ""}
     ])
+
+    const [totalPrice, setTotalPrice] = useState (0.00)
 
     return (
         <div className="headerBody">
@@ -17,7 +19,10 @@ function AppHeader() {
                 <div className='storeName'>
                     <p>-Store Name-</p>
                 </div>
-                <div className='storeCart'>Cart</div>
+                <div className='storeCart'>
+                    Cart
+                    <p className='totalPrice'>£{totalPrice.toFixed(2)}</p>
+                </div>
             </div>
             <div className='headerBottom'>
                 {pages.map((page) => {
