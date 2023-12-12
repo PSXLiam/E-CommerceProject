@@ -1,6 +1,16 @@
+import { useState } from 'react';
 import './AppHeader.css'
 
 function AppHeader() {
+
+    const [pages, setPages] = useState([
+        {title: "Home"},
+        {title: "Test2"},
+        {title: "Test3"},
+        {title: "Test4"},
+        {title: "Test5"}
+    ])
+
     return (
         <div className="headerBody">
             <div className='headerTop'>
@@ -10,7 +20,11 @@ function AppHeader() {
                 <div className='storeCart'>Cart</div>
             </div>
             <div className='headerBottom'>
-                <button className='headerButton'>TEST1</button>
+                {pages.map((page) => {
+                    return(
+                       <button className='headerButton'>{page.title}</button> 
+                    )
+                })}
             </div>
         </div>
     )
