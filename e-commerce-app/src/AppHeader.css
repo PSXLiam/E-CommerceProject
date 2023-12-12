@@ -1,0 +1,7 @@
+.headerBody{
+    display: flex;
+    align-items: flex-start;
+    width: 100vw;
+    height: 50vh;
+    background-color: blueviolet;
+}
