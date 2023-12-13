@@ -14,7 +14,7 @@ function App() {
       <header className="App-header">
             <AppHeader/>
               <div className='AppBody'>
-                <currentPage/>
+                <BodyHome/>
               </div>
             <AppFooter/>
       </header>
