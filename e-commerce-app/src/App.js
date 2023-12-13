@@ -6,13 +6,16 @@ import { useState } from 'react';
 
 function App() {
 
-// const [products, setProducts] =  useState(["screen 1", "screen 2"])
+  const [currentPage, setCurrentPage] = useState(BodyHome)
+  // const [products, setProducts] =  useState(["screen 1", "screen 2"])
 
   return (
     <div className="App">
       <header className="App-header">
             <AppHeader/>
-            <BodyHome/> 
+              <div className='AppBody'>
+                <currentPage/>
+              </div>
             <AppFooter/>
       </header>
     </div>
