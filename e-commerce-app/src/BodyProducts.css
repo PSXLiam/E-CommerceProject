@@ -1,0 +1,25 @@
+.AppBody{
+    height: 60vh;
+}
+
+.productType{
+    background-color: brown;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.productTypeTitle{
+    text-decoration: underline;
+}
+
+.ProductBox{
+    background-color: aqua;
+}
+
+.productName{
+    width: 100px;
+    height: 100px;
+}

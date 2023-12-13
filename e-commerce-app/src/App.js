@@ -2,12 +2,13 @@ import './App.css';
 import AppHeader from './AppHeader';
 import AppFooter from './AppFooter';
 import BodyHome from './BodyHome';
+import BodyProducts from './BodyProducts';
 import BodyHelp from './BodyHelp';
 import { useState } from 'react';
 
 function App() {
 
-  const [currentPage, setCurrentPage] = useState("Home")
+  const [currentPage, setCurrentPage] = useState("Products")
   // const [products, setProducts] =  useState(["screen 1", "screen 2"])
 
   return (
@@ -16,10 +17,13 @@ function App() {
             <AppHeader/>
               <div className='AppBody'>
                 {currentPage == "Home" &&
-                  <><BodyHome/></>
+                  <BodyHome/>
+                }
+                {currentPage == "Products" &&
+                  <BodyProducts/>
                 }
                 {currentPage == "Help" &&
-                  <><BodyHelp/></>
+                  <BodyHelp/>
                 }
               </div>
             <AppFooter/>
