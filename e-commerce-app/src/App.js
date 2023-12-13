@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 function App() {
 
-  const [currentPage, setCurrentPage] = useState(BodyHome)
+  const [currentPage, setCurrentPage] = useState(1)
   // const [products, setProducts] =  useState(["screen 1", "screen 2"])
 
   return (
@@ -15,7 +15,12 @@ function App() {
       <header className="App-header">
             <AppHeader/>
               <div className='AppBody'>
-                <BodyHelp/>
+                {currentPage == 1 &&
+                  <><BodyHome/></>
+                }
+                {currentPage == 2 &&
+                  <><BodyHelp/></>
+                }
               </div>
             <AppFooter/>
       </header>
