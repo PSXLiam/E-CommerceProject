@@ -1,0 +1,36 @@
+.AppBody{
+    height: 60vh;
+}
+
+.bodyTop{
+    background-color: aqua;
+    width: 100vw;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productImage{
+    min-width: 150px;
+    min-height: 150px;
+    border: 5px solid black;
+}
+
+
+.bodyBottom{
+    background-color: coral;
+    width: 100vw;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productInfo{
+    background-color: darkseagreen;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
