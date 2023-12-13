@@ -1,11 +1,12 @@
 import { useState } from 'react';
+import setCurrentPage from './App';
 import './BodyHome.css'
 
 function BodyHome() {
     return(
         <div className='AppBody'>
             <div className='bodyTop'>
-                <div className='bigHelpButton'>
+                <div className='bigHelpButton' onClick={() => {setCurrentPage("Help")}}>
                     <p>Need Help?<br/> Click Here</p>
                 </div>
             </div>

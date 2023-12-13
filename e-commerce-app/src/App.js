@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 function App() {
 
-  const [currentPage, setCurrentPage] = useState(1)
+  const [currentPage, setCurrentPage] = useState("Home")
   // const [products, setProducts] =  useState(["screen 1", "screen 2"])
 
   return (
@@ -15,10 +15,10 @@ function App() {
       <header className="App-header">
             <AppHeader/>
               <div className='AppBody'>
-                {currentPage == 1 &&
+                {currentPage == "Home" &&
                   <><BodyHome/></>
                 }
-                {currentPage == 2 &&
+                {currentPage == "Help" &&
                   <><BodyHelp/></>
                 }
               </div>
