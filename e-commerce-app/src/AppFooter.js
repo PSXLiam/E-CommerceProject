@@ -2,11 +2,20 @@ import { useState } from 'react';
 import './AppFooter.css'
 
 function AppFooter() {
+
+    const [pages, setPages] = useState([
+        {title: "FAQ"},
+        {title: "Help"},
+        {title: "About Us"}
+    ])
+
     return(
         <div className='footerBody'>
-            <button className='footerButton'>FAQ</button>
-            <button className='footerButton'>Help</button>
-            <button className='footerButton'>About Us</button>
+            {pages.map((page) => {
+                return(
+                    <button className='footerButton'>{page.title}</button> 
+                )
+            })}
         </div>
     )
 }
