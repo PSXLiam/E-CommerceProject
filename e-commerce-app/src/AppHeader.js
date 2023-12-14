@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './AppHeader.css'
 
-function AppHeader({setCurrentPage}) {
+function AppHeader({setCurrentPage, totalPrice}) {
 
     const [pages, setPages] = useState([
         {title: "Home"},
@@ -10,8 +10,6 @@ function AppHeader({setCurrentPage}) {
         {title: ""},
         {title: ""}
     ])
-
-    const [totalPrice, setTotalPrice] = useState (0.00)
 
     return (
         <div className="headerBody">

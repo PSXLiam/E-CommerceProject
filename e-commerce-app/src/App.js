@@ -9,20 +9,27 @@ import { useState } from 'react';
 
 function App() {
 
-  const [currentPage, setCurrentPage] = useState("Products")
+  const [currentPage, setCurrentPage] = useState("Home")
   const [products, setProducts] = useState([
     {
-        image: "BigScreen.jpg",
+        image: "BigScreen",
         name: "Big Screen",
         description: "Its a big screen",
-        price: "21.99"
+        price: 21.99
+    },
+    {
+        image: "",
+        name: "Small Screen",
+        description: "Its a small screen",
+        price: 11.99
     }
-])
+  ])
+  const [totalPrice, setTotalPrice] = useState (0.00)
 
   return (
     <div className="App">
       <header className="App-header">
-            <AppHeader setCurrentPage={setCurrentPage}/>
+            <AppHeader setCurrentPage={setCurrentPage} totalPrice={totalPrice}/>
               <div className='AppBody'>
                 {currentPage == "Home" &&
                   <BodyHome setCurrentPage={setCurrentPage}/>
@@ -31,7 +38,7 @@ function App() {
                   <BodyProducts setCurrentPage={setCurrentPage} products={products}/>
                 }
                 {currentPage == "Product" &&
-                  <BodyProduct products={products}/>
+                  <BodyProduct products={products} totalPrice={totalPrice} setTotalPrice={setTotalPrice}/>
                 }
                 {currentPage == "Help" &&
                   <BodyHelp/>

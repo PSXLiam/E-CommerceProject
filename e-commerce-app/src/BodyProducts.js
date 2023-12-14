@@ -8,10 +8,14 @@ function BodyProducts({setCurrentPage, products}) {
             <div className='productType'>
                 <p className='productTypeTitle'>Monitors</p>
                 <div className='ProductsBox'>
-                    <div className='SingleProductBox' onClick={() => {setCurrentPage("Product")}}>
-                        <img className='productImage' src="BigScreen.jpg" alt='Image Not Found'></img>
-                        <div className='productName'>{products[0].name}</div>
-                    </div>
+                    {products.map((product) => {
+                        return(
+                            <div className='SingleProductBox' onClick={() => {setCurrentPage("Product")}}>
+                            <img className='productImage' src={product.image} alt='Image Not Found'></img>
+                            <div className='productName'>{product.name}</div>
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         </div>

@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import setCurrentPage from './App';
 import './BodyProduct.css'
 
-function BodyProduct({products}) {
+function BodyProduct({products, totalPrice, setTotalPrice}) {
 
     return(
         <div className='AppBody'>
@@ -14,7 +13,7 @@ function BodyProduct({products}) {
                     <p className='infoText'>{products[0].name}</p>
                     <p className='infoText'>Price: £{products[0].price}</p>
                     <p className='infoText'>{products[0].description}</p>
-                    <button>Add to Cart</button>
+                    <button onClick={() => {setTotalPrice(totalPrice+products[0].price)}}>Add to Cart</button>
                 </div>
             </div>
         </div>
