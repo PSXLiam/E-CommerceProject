@@ -1,16 +1,7 @@
 import { useState } from 'react';
 import './BodyProducts.css'
 
-function BodyProducts({setCurrentPage}) {
-
-    const [products, setProducts] = useState([
-        {
-            image: "BigScreen.jpg",
-            name: "Big Screen",
-            description: "Its a big screen",
-            price: "21.99"
-        }
-    ])
+function BodyProducts({setCurrentPage, products}) {
 
     return(
         <div className='AppBody'>

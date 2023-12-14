@@ -10,7 +10,14 @@ import { useState } from 'react';
 function App() {
 
   const [currentPage, setCurrentPage] = useState("Products")
-  // const [products, setProducts] =  useState(["screen 1", "screen 2"])
+  const [products, setProducts] = useState([
+    {
+        image: "BigScreen.jpg",
+        name: "Big Screen",
+        description: "Its a big screen",
+        price: "21.99"
+    }
+])
 
   return (
     <div className="App">
@@ -21,10 +28,10 @@ function App() {
                   <BodyHome setCurrentPage={setCurrentPage}/>
                 }
                 {currentPage == "Products" &&
-                  <BodyProducts setCurrentPage={setCurrentPage}/>
+                  <BodyProducts setCurrentPage={setCurrentPage} products={products}/>
                 }
                 {currentPage == "Product" &&
-                  <BodyProduct/>
+                  <BodyProduct products={products}/>
                 }
                 {currentPage == "Help" &&
                   <BodyHelp/>

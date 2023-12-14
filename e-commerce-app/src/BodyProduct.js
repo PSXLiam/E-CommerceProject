@@ -2,17 +2,18 @@ import { useState } from 'react';
 import setCurrentPage from './App';
 import './BodyProduct.css'
 
-function BodyProduct() {
+function BodyProduct({products}) {
 
     return(
         <div className='AppBody'>
-            <div className='bodyTop'>
+            <div className='bodyTopProduct'>
                 <img className='productImage' alt='Image Not Found'></img>
             </div>
-            <div className='bodyBottom'>
+            <div className='bodyBottomProduct'>
                 <div className='productInfo'>
-                    <p>-product name-</p>
-                    <p>--product info here--</p>
+                    <p className='infoText'>{products[0].name}</p>
+                    <p className='infoText'>Price: £{products[0].price}</p>
+                    <p className='infoText'>{products[0].description}</p>
                     <button>Add to Cart</button>
                 </div>
             </div>
