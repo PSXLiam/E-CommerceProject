@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 function App() {
 
-  const [currentPage, setCurrentPage] = useState("Product")
+  const [currentPage, setCurrentPage] = useState("Products")
   // const [products, setProducts] =  useState(["screen 1", "screen 2"])
 
   return (

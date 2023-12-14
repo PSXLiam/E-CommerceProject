@@ -15,8 +15,16 @@
     text-decoration: underline;
 }
 
-.ProductBox{
+.ProductsBox{
     background-color: aqua;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.SingleProductBox{
+    border: 5px solid black;
+    margin: 5px;
 }
 
 .productName{
