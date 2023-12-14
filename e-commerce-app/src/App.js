@@ -15,13 +15,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-            <AppHeader/>
+            <AppHeader setCurrentPage={setCurrentPage}/>
               <div className='AppBody'>
                 {currentPage == "Home" &&
-                  <BodyHome/>
+                  <BodyHome setCurrentPage={setCurrentPage}/>
                 }
                 {currentPage == "Products" &&
-                  <BodyProducts/>
+                  <BodyProducts setCurrentPage={setCurrentPage}/>
                 }
                 {currentPage == "Product" &&
                   <BodyProduct/>
@@ -30,7 +30,7 @@ function App() {
                   <BodyHelp/>
                 }
               </div>
-            <AppFooter/>
+            <AppFooter setCurrentPage={setCurrentPage}/>
       </header>
     </div>
   );

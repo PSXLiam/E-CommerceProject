@@ -3,6 +3,7 @@ import setCurrentPage from './App';
 import './BodyProduct.css'
 
 function BodyProduct() {
+
     return(
         <div className='AppBody'>
             <div className='bodyTop'>

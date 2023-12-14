@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import setCurrentPage from './App';
 import './AppHeader.css'
 
-function AppHeader() {
+function AppHeader({setCurrentPage}) {
 
     const [pages, setPages] = useState([
         {title: "Home"},
@@ -28,7 +27,7 @@ function AppHeader() {
             <div className='headerBottom'>
                 {pages.map((page) => {
                     return(
-                       <button className='headerButton' onClick={() => {setCurrentPage(pages.title)}}>{page.title}</button> 
+                       <button className='headerButton' onClick={() => {setCurrentPage(page.title)}}>{page.title}</button> 
                     )
                 })}
             </div>

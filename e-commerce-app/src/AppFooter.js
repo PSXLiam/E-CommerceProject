@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './AppFooter.css'
 
-function AppFooter() {
+function AppFooter({setCurrentPage}) {
 
     const [pages, setPages] = useState([
         {title: "FAQ"},
@@ -13,7 +13,7 @@ function AppFooter() {
         <div className='footerBody'>
             {pages.map((page) => {
                 return(
-                    <button className='footerButton'>{page.title}</button> 
+                    <button className='footerButton' onClick={() => {setCurrentPage(page.title)}}>{page.title}</button> 
                 )
             })}
         </div>

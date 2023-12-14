@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import setCurrentPage from './App';
 import './BodyHome.css'
 
-function BodyHome() {
+function BodyHome({setCurrentPage}) {
     return(
         <div className='AppBody'>
             <div className='bodyTop'>

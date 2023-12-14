@@ -24,10 +24,19 @@
 
 .SingleProductBox{
     border: 5px solid black;
+    width: 200px;
+    height: 200px;
     margin: 5px;
 }
 
-.productName{
-    width: 100px;
-    height: 100px;
+.SingleProductBox:hover{
+    cursor: pointer;
+    scale: 105%;
 }
+
+.productImage{
+    width: 180px;
+    height: 180px;
+    border: 2px solid black;
+}
+
