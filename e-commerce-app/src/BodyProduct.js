@@ -3,6 +3,9 @@ import './BodyProduct.css'
 
 function BodyProduct({products, totalPrice, setTotalPrice}) {
 
+    const [index, setIndex] = useState(0)
+    setIndex(products.index)
+
     return(
         <div className='AppBody'>
             <div className='bodyTopProduct'>
@@ -10,10 +13,10 @@ function BodyProduct({products, totalPrice, setTotalPrice}) {
             </div>
             <div className='bodyBottomProduct'>
                 <div className='productInfo'>
-                    <p className='infoText'>{products[0].name}</p>
-                    <p className='infoText'>Price: £{products[0].price}</p>
-                    <p className='infoText'>{products[0].description}</p>
-                    <button onClick={() => {setTotalPrice(totalPrice+products[0].price)}}>Add to Cart</button>
+                    <p className='infoText'>{products[index].name}</p>
+                    <p className='infoText'>Price: £{products[index].price}</p>
+                    <p className='infoText'>{products[index].description}</p>
+                    <button onClick={() => {setTotalPrice(totalPrice+products[index].price)}}>Add to Cart</button>
                 </div>
             </div>
         </div>

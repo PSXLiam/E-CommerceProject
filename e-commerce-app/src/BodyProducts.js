@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './BodyProducts.css'
 
 function BodyProducts({setCurrentPage, products}) {
@@ -8,11 +7,15 @@ function BodyProducts({setCurrentPage, products}) {
             <div className='productType'>
                 <p className='productTypeTitle'>Monitors</p>
                 <div className='ProductsBox'>
-                    {products.map((product) => {
+                    {products.map((product, index) => {
                         return(
                             <div className='SingleProductBox' onClick={() => {setCurrentPage("Product")}}>
-                            <img className='productImage' src={product.image} alt='Image Not Found'></img>
-                            <div className='productName'>{product.name}</div>
+                                <img className='productImage' src={product.image} alt='Image Not Found'></img>
+                                <div className='productName'>{product.name}</div>
+                                <div className='productPrice'>£{product.price}</div>
+
+                                let productIndex = index
+                                
                             </div>
                         )
                     })}
