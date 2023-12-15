@@ -5,16 +5,14 @@ function BodyHome({setCurrentPage}) {
     return(
         <div className='AppBody'>
             <div className='bodyTop'>
-                <div className='bigHelpButton' onClick={() => {setCurrentPage("Help")}}>
+                <div className='bigHelpButton' onClick={() => {setCurrentPage("Help")}}> {/* on click load "Help" page*/}
                     <p>Need Help?<br/> Click Here</p>
                 </div>
             </div>
             <div className='bodyBottom'>
                 <p className='PRec'>Product Recommendations</p>
                 <div className='prodRecommendations'>
-                    <div className='TESTPRODUCT'>TEST1</div>
-                    <div className='TESTPRODUCT'>TEST2</div>
-                    <div className='TESTPRODUCT'>TEST3</div>
+                    {/*Product recommendations here*/}
                 </div>
             </div>
         </div>

@@ -6,11 +6,11 @@ import BodyProducts from './BodyProducts';
 import BodyProduct from './BodyProduct';
 import BodyCart from './BodyCart';
 import BodyHelp from './BodyHelp';
-import { useState } from 'react';
+import { useState } from 'react'; //Allow the use of useState
 
 function App() {
 
-  const [currentPage, setCurrentPage] = useState("Cart")
+  const [currentPage, setCurrentPage] = useState("Cart") //useState to store what page is currenly in the body
   const [products, setProducts] = useState([
     {
         image: "BigScreen",
@@ -24,15 +24,17 @@ function App() {
         description: "Its a small screen",
         price: 11.99
     }
-  ])
-  const [totalPrice, setTotalPrice] = useState (0.00)
+  ]) //useState containing all the products for the app.
+
+  const [totalPrice, setTotalPrice] = useState (0.00) //const for holding total price of users order
 
   return (
     <div className="App">
       <header className="App-header">
-            <AppHeader setCurrentPage={setCurrentPage} totalPrice={totalPrice}/>
-              <div className='AppBody'>
-                {currentPage == "Home" &&
+            <AppHeader setCurrentPage={setCurrentPage} totalPrice={totalPrice}/> {/*load AppHeader to top of page*/}
+              <div className='AppBody'> {/*div for main body of the app*/}
+              {/*A series of shorthand if statements to allow conditonal rendering */}
+                {currentPage == "Home" && 
                   <BodyHome setCurrentPage={setCurrentPage}/>
                 }
                 {currentPage == "Products" &&
@@ -48,7 +50,7 @@ function App() {
                   <BodyHelp/>
                 }
               </div>
-            <AppFooter setCurrentPage={setCurrentPage}/>
+            <AppFooter setCurrentPage={setCurrentPage}/> {/*load AppFooter to bottom of page*/}
       </header>
     </div>
   );

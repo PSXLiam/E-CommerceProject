@@ -30,6 +30,11 @@
     border: 2px solid black;
 }
 
+.storeCart:hover{
+    cursor: pointer;
+    scale: 105%;
+}
+
 .headerBottom{
     display: flex;
     flex-direction: row;
