@@ -1,0 +1,25 @@
+.AppBody{
+    height: 60vh;
+}
+
+.cartBody{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cartTitle{
+    text-decoration: underline;
+}
+
+.cartContent{
+    background-color: aqua;
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+

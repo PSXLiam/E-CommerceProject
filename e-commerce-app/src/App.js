@@ -4,12 +4,13 @@ import AppFooter from './AppFooter';
 import BodyHome from './BodyHome';
 import BodyProducts from './BodyProducts';
 import BodyProduct from './BodyProduct';
+import BodyCart from './BodyCart';
 import BodyHelp from './BodyHelp';
 import { useState } from 'react';
 
 function App() {
 
-  const [currentPage, setCurrentPage] = useState("Home")
+  const [currentPage, setCurrentPage] = useState("Cart")
   const [products, setProducts] = useState([
     {
         image: "BigScreen",
@@ -39,6 +40,9 @@ function App() {
                 }
                 {currentPage == "Product" &&
                   <BodyProduct products={products} totalPrice={totalPrice} setTotalPrice={setTotalPrice}/>
+                }
+                {currentPage == "Cart" &&
+                  <BodyCart/>
                 }
                 {currentPage == "Help" &&
                   <BodyHelp/>
