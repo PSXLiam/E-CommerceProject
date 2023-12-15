@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import './BodyProduct.css'
 
-function BodyProduct({products, totalPrice, setTotalPrice}) {
+function BodyProduct({products, totalPrice, setTotalPrice, getIndex}) {
 
     const [index, setIndex] = useState(0)
-    setIndex(products.index)
+    setIndex(getIndex)
 
     return(
         <div className='AppBody'>

@@ -1,5 +1,9 @@
 import './BodyProducts.css'
 
+function getIndex(index){
+    return index
+}
+
 function BodyProducts({setCurrentPage, products}) {
 
     return(
@@ -13,9 +17,6 @@ function BodyProducts({setCurrentPage, products}) {
                                 <img className='productImage' src={product.image} alt='Image Not Found'></img>
                                 <div className='productName'>{product.name}</div>
                                 <div className='productPrice'>£{product.price}</div>
-
-                                let productIndex = index
-                                
                             </div>
                         )
                     })}
