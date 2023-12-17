@@ -10,7 +10,7 @@ import { useState } from 'react'; //Allow the use of useState
 
 function App() {
 
-  const [currentPage, setCurrentPage] = useState("Cart") //useState to store what page is currenly in the body
+  const [currentPage, setCurrentPage] = useState("Home") //useState to store what page is currenly in the body
   const [products, setProducts] = useState([
     {
         image: "BigScreen",
@@ -26,6 +26,8 @@ function App() {
     }
   ]) //useState containing all the products for the app.
 
+  const [productIndex, setProductIndex] = useState (0) //cosnt for holding index of product
+  
   const [totalPrice, setTotalPrice] = useState (0.00) //const for holding total price of users order
 
   return (
@@ -38,13 +40,13 @@ function App() {
                   <BodyHome setCurrentPage={setCurrentPage}/>
                 }
                 {currentPage == "Products" &&
-                  <BodyProducts setCurrentPage={setCurrentPage} products={products}/>
+                  <BodyProducts setCurrentPage={setCurrentPage} products={products} setProductIndex={setProductIndex}/>
                 }
                 {currentPage == "Product" &&
-                  <BodyProduct products={products} totalPrice={totalPrice} setTotalPrice={setTotalPrice}/>
+                  <BodyProduct products={products} totalPrice={totalPrice} setTotalPrice={setTotalPrice} productIndex={productIndex}/>
                 }
                 {currentPage == "Cart" &&
-                  <BodyCart/>
+                  <BodyCart totalPrice={totalPrice}/>
                 }
                 {currentPage == "Help" &&
                   <BodyHelp/>
