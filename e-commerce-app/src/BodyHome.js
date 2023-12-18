@@ -2,6 +2,9 @@ import { useState } from 'react';
 import './BodyHome.css'
 
 function BodyHome({setCurrentPage}) {
+
+    const [recommendations, setRecommendations] = useState(["", "", "", ""]) //array for recommendations in BodyHome
+
     return(
         <div className='AppBody'>
             <div className='bodyTop'>
@@ -12,7 +15,12 @@ function BodyHome({setCurrentPage}) {
             <div className='bodyBottom'>
                 <p className='PRec'>Product Recommendations</p>
                 <div className='prodRecommendations'>
-                    {/*Product recommendations here*/}
+                    {recommendations.map((index) => { //for each value in recommendations
+                        return(
+                            <div className='TESTPRODUCT'></div> //create a div of TESTPRODUCT
+                        )
+                    })}
+                    
                 </div>
             </div>
         </div>
