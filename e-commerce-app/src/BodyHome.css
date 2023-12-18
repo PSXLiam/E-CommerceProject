@@ -3,7 +3,7 @@
 }
 
 .bodyTop{
-    background-color: aqua;
+    background-color: whitesmoke;
     width: 100vw;
     height: 40%;
     display: flex;
@@ -12,7 +12,7 @@
 }
 
 .bigHelpButton{
-    background-color: darkolivegreen;
+    background-color: lightgrey;
     width: 90vw;
     height: 90%;
     display: flex;
@@ -26,7 +26,7 @@
 }
 
 .bodyBottom{
-    background-color: coral;
+    background-color: darkgrey;
     width: 100vw;
     height: 60%;
     display: flex;
@@ -40,7 +40,7 @@
 }
 
 .prodRecommendations{
-    background-color: lightseagreen;
+    background-color: darkgrey;
     width: 90vw;
     height: 80%;
     display: flex;

@@ -9,7 +9,7 @@ function AppHeader({setCurrentPage, totalPrice}) {//prop setCurrentPage to allow
         <div className="headerBody">
             <div className='headerTop'> {/*div for the top half*/}
                 <div className='storeName'>
-                    <p>-Store Name-</p>
+                    <p>--Hardware Buddy--</p>
                 </div>
                 <div className='storeCart' onClick={() => {setCurrentPage("Cart")}}> {/*div for cart*/}
                     Cart
