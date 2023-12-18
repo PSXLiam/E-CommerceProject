@@ -4,7 +4,7 @@ import AppFooter from './AppFooter';
 import BodyHome from './BodyHome';
 import BodyProducts from './BodyProducts';
 import BodyProduct from './BodyProduct';
-import BodyCart from './BodyCart';
+import { BodyCart } from './BodyCart';
 import BodyHelp from './BodyHelp';
 import { useState } from 'react'; //Allow the use of useState
 
@@ -26,7 +26,7 @@ function App() {
     }
   ]) //useState containing all the products for the app.
 
-  const [productIndex, setProductIndex] = useState (0) //cosnt for holding index of product
+  const [productIndex, setProductIndex] = useState (0) //const for holding index of product
   
   const [totalPrice, setTotalPrice] = useState (0.00) //const for holding total price of users order
 

@@ -3,8 +3,8 @@ import './BodyProduct.css'
 
 function BodyProduct({products, totalPrice, setTotalPrice, productIndex}) {
 
-    const [index, setIndex] = useState(0)
-    //setIndex(productIndex)
+    const [index, setIndex] = useState(productIndex)
+    //console.log(productIndex)
 
     return(
         <div className='AppBody'>
