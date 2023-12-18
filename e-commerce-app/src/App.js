@@ -7,13 +7,14 @@ import BodyProduct from './BodyProduct';
 import { BodyCart } from './BodyCart';
 import BodyHelp from './BodyHelp';
 import { useState } from 'react'; //Allow the use of useState
+import BigScreen from './BigScreen.jpg'
 
 function App() {
 
   const [currentPage, setCurrentPage] = useState("Home") //useState to store what page is currenly in the body
   const [products, setProducts] = useState([
     {
-        image: "BigScreen",
+        image: BigScreen,
         name: "Big Screen",
         description: "Its a big screen",
         price: 21.99

@@ -11,8 +11,10 @@
     justify-content: center;
 }
 
-.productImage{
-    color: black;
+.singleProductImage{
+    max-width: 200px;
+    max-height: 200px;
+    border: 2px solid black;
 }
 
 .bodyBottomProduct{

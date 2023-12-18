@@ -9,7 +9,7 @@ function BodyProduct({products, totalPrice, setTotalPrice, productIndex}) {
     return(
         <div className='AppBody'>
             <div className='bodyTopProduct'>
-                <img className='productImage' alt='Image Not Found'></img>{/*generate 'Image Not Found' when no image is found*/}
+                <img className='singleProductImage' src={products[index].image} alt='Image Not Found'></img>{/*generate 'Image Not Found' when no image is found*/}
             </div>
             <div className='bodyBottomProduct'>
                 <div className='productInfo'>
