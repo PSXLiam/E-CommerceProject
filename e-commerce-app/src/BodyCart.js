@@ -19,9 +19,9 @@ export class Cart{ //class to contain information of the cart
     }
 }
 
-export function BodyCart({totalPrice}) {
+export function BodyCart({totalPrice, cartState}) {
 
-    let currentCart = new Cart("TESTS", totalPrice)
+    let currentCart = new Cart(cartState, totalPrice)
     let postageCost = currentCart.findPostage()
 
     return(

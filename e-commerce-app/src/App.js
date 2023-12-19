@@ -28,6 +28,8 @@ function App() {
   ]) //useState containing all the products for the app.
 
   const [productIndex, setProductIndex] = useState (0) //const for holding index of product
+
+  const [cartState, setCartState] = useState ([""]) //const to hold the content of the cart
   
   const [totalPrice, setTotalPrice] = useState (0.00) //const for holding total price of users order
 
@@ -44,10 +46,10 @@ function App() {
                   <BodyProducts setCurrentPage={setCurrentPage} products={products} setProductIndex={setProductIndex}/>
                 }
                 {currentPage == "Product" &&
-                  <BodyProduct products={products} totalPrice={totalPrice} setTotalPrice={setTotalPrice} productIndex={productIndex}/>
+                  <BodyProduct products={products} totalPrice={totalPrice} setTotalPrice={setTotalPrice} productIndex={productIndex} cartState={cartState} setCartState={setCartState}/>
                 }
                 {currentPage == "Cart" &&
-                  <BodyCart totalPrice={totalPrice}/>
+                  <BodyCart totalPrice={totalPrice} cartState={cartState}/>
                 }
                 {currentPage == "Help" &&
                   <BodyHelp/>
