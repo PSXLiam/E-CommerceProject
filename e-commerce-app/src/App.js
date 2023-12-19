@@ -30,7 +30,7 @@ function App() {
 
   const [productIndex, setProductIndex] = useState (0) //const for holding index of product
 
-  const [cartState, setCartState] = useState ([""]) //const to hold the content of the cart
+  const [cartState, setCartState] = useState ([]) //const to hold the content of the cart
   
   const [totalPrice, setTotalPrice] = useState (0.00) //const for holding total price of users order
 

@@ -7,9 +7,8 @@ function BodyProduct({products, totalPrice, setTotalPrice, productIndex, cartSta
     //console.log(productIndex)
 
     function addCart(newCart){
-        let formatCart = `${newCart}, `
         let temp = [...cartState]
-        temp.push(formatCart)
+        temp.push(newCart)
         setCartState(temp)
     }
 
