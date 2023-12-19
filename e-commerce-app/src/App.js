@@ -8,6 +8,7 @@ import { BodyCart } from './BodyCart';
 import BodyHelp from './BodyHelp';
 import { useState } from 'react'; //Allow the use of useState
 import BigScreen from './BigScreen.jpg'
+import SmallScreen from './SmallScreen.jpg'
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
         price: 21.99
     },
     {
-        image: "",
+        image: SmallScreen,
         name: "Small Screen",
         description: "Its a small screen",
         price: 11.99
