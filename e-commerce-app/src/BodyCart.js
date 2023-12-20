@@ -7,6 +7,7 @@ export class Cart{ //class to contain information of the cart
         this.totalPrice = totalPrice
     }
 
+    /**A Function to Calculate the Postage of the Order*/
     findPostage(){ //function to calculate postage for order
         let postageCost = 5
         if (this.totalPrice == 0 || this.totalPrice > 200){//if totalPrice is equal to '0' or more than '200'
@@ -18,6 +19,7 @@ export class Cart{ //class to contain information of the cart
         }
     }
 
+    /**A Function that takes the 'products' Array and Transforms it into a more Viewable Format.*/
     completeCartState(){
         console.log(this.products)
         const contentCart = []
