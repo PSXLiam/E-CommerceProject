@@ -20,20 +20,30 @@ export class Cart{ //class to contain information of the cart
 
     completeCartState(){
         console.log(this.products)
-        const completeCart = []
+        const contentCart = []
+
         this.products.forEach(e => { //for each value in product
-            if (completeCart[e]) { //if value is already in product
-                completeCart[e] += 1 //add another instance of product
+            if (contentCart[e]) { //if value is already in product
+                contentCart[e] += 1 //add another instance of product
             }
             else{
-                completeCart[e] = 1 //intilised product as 1
+                contentCart[e] = 1 //initialize product as 1
             }
         })
 
-        console.log(completeCart)
+        // console.log(contentCart)
 
-        // return completeCart.map((products) => <li>{products}</li>);//return each value of the array in a list.
+        const cartMap = new Map(Object.entries(contentCart)) //turn contentCart into Map
 
+        // console.log(cartMap)
+
+        let completeCart = ""
+        cartMap.forEach (function(value, key){ //for each key/value pair in cartMap
+            completeCart += key + " x" + value + ". " //format output to give it correct appearence
+        })
+
+        // console.log(completeCart)
+        
         return completeCart
     }
 }
@@ -44,14 +54,12 @@ export function BodyCart({totalPrice, cartState}) {
     let postageCost = currentCart.findPostage()
     let completeCart = currentCart.completeCartState()
 
-    console.log(completeCart)
-
     return(
         <div className='AppBody'>
             <div className='cartBody'>
             <p className='cartTitle'>Cart</p>
                 <div className='cartContent'>
-                    <p className='productList'>Cart Content: {/*currentCart.products*/ completeCart.map((products) => <li>{products}</li>)}</p>
+                    <p className='productList'>Cart Content: {completeCart}</p>
                     <p className='totalPrice'>Product Total: £{parseFloat(currentCart.totalPrice).toFixed(2)}</p>{/*make totalPrice a float with two decimal places*/}
                     <p className='totalPrice'>Postage: £{postageCost.toFixed(2)}</p>
                     <p className='totalPrice'>Total Price: £{(parseFloat(currentCart.totalPrice) + postageCost).toFixed(2)}</p>
