@@ -21,7 +21,7 @@ export class Cart{ //class to contain information of the cart
 
     /**A Function that takes the 'products' Array and Transforms it into a more Viewable Format.*/
     completeCartState(){
-        console.log(this.products)
+        //console.log(this.products)
         const contentCart = []
 
         this.products.forEach(e => { //for each value in product
@@ -50,11 +50,25 @@ export class Cart{ //class to contain information of the cart
     }
 }
 
-export function BodyCart({totalPrice, cartState}) {
+export function BodyCart({totalPrice, setTotalPrice, cartState, setCartState}) {
 
     let currentCart = new Cart(cartState, totalPrice) //create new instance of current cart
-    let postageCost = currentCart.findPostage()
-    let completeCart = currentCart.completeCartState()
+
+    const [formatCart, setFormatCart] = useState(currentCart)
+    let completeCart = formatCart.completeCartState()
+    //console.log(formatCart)
+    const [productTotal, setProductTotal] = useState(parseFloat(currentCart.totalPrice.toFixed(2))) /*make 'productTotal' a float with two decimal places*/
+    const [postageCost, setPostageCost] = useState(currentCart.findPostage())
+
+    /**A Function to Empty the Cart of all Products*/
+    function clearCart(){
+        setTotalPrice(0)
+        setCartState([])
+        setFormatCart(new Cart([], 0))
+        setProductTotal(0)
+        setPostageCost(0)
+    }
+
 
     return(
         <div className='AppBody'>
@@ -62,9 +76,10 @@ export function BodyCart({totalPrice, cartState}) {
             <p className='cartTitle'>Cart</p>
                 <div className='cartContent'>
                     <p className='productList'>Cart Content: {completeCart}</p>
-                    <p className='totalPrice'>Product Total: £{parseFloat(currentCart.totalPrice).toFixed(2)}</p>{/*make totalPrice a float with two decimal places*/}
-                    <p className='totalPrice'>Postage: £{postageCost.toFixed(2)}</p>
-                    <p className='totalPrice'>Total Price: £{(parseFloat(currentCart.totalPrice) + postageCost).toFixed(2)}</p>
+                    <p className='totalPrice'>Product Total: £{productTotal}</p>
+                    <p className='totalPrice'>Postage: £{postageCost.toFixed(2)}</p>{/*make 'postageCost' appear in two decimal places*/}
+                    <p className='totalPrice'>Total Price: £{(productTotal + postageCost).toFixed(2)}</p>{/*have the Total Price appear in two decimal places*/}
+                    <button onClick={() => {clearCart()}}>Clear Order</button>
                 </div>
             </div>
         </div>

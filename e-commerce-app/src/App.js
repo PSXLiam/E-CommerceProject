@@ -50,7 +50,7 @@ function App() {
                   <BodyProduct products={products} totalPrice={totalPrice} setTotalPrice={setTotalPrice} productIndex={productIndex} cartState={cartState} setCartState={setCartState}/>
                 }
                 {currentPage == "Cart" &&
-                  <BodyCart totalPrice={totalPrice} cartState={cartState}/>
+                  <BodyCart totalPrice={totalPrice} setTotalPrice={setTotalPrice} cartState={cartState} setCartState={setCartState}/>
                 }
                 {currentPage == "Help" &&
                   <BodyHelp/>
